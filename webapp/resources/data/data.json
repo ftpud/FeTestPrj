@@ -1,0 +1,20 @@
+{
+  "Collection": [
+    {
+      "title": "ENS - Alegro",
+      "url": "http://localhost:8080/resources/test_data/Alegro.mp3"
+    },
+    {
+      "title": "EastNewSound - что-то",
+      "url": "http://localhost:8080/resources/test_data/13. 緋色月下、狂咲ノ絶 -2017-.mp3"
+    },
+    {
+      "title": "EastNewSound - что-то другое",
+      "url": "http://localhost:8080/resources/test_data/03. 滲色血界、月狂ノ獄.mp3"
+    },
+    {
+      "title": "какая-то хрень",
+      "url": "http://localhost:8080/resources/test_data/04. フラワリングナイト～Busting Core Mix.mp3"
+    }
+  ]
+}

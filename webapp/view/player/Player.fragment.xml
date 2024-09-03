@@ -1,0 +1,80 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:l="sap.ui.layout"
+>
+
+    <!-- <Label text="{player>/currentItem/title}"/>
+    <Button xmlns="sap.m" id="btnInFragment" text="Hello Fragment"/>
+-->
+
+
+    <Panel>
+        <FlexBox
+                alignItems="Center"
+                justifyContent="Center">
+
+            <l:VerticalLayout>
+
+                <HBox>
+
+                    <Label text="[{
+                        path: 'player>/playerState/position',
+                        formatter: '.formatter.formatTime'
+                    } {
+                        path: 'player>/playerState/duration',
+                        formatter: '.formatter.formatTime'
+                    }]" class="sapUiTinyMarginEnd"/>
+
+
+                    <Label text="{player>/playerState/nowPlaying}"/>
+                </HBox>
+                <!--   <ProgressIndicator
+
+                          class="sapUiSmallMarginBottom"
+                          percentValue="{player>/playerState/percent}"
+                          displayValue="30%"
+                          showValue="true"
+                          state="None"/> -->
+
+
+                <Slider
+                        min="0"
+                        max="{player>/playerState/duration}"
+                        value="{player>/playerState/position}"
+                        liveChange="onSeek"
+                />
+
+
+                <l:HorizontalLayout>
+
+                    <l:BlockLayoutCell width="1">
+                        <Button icon="sap-icon://add-favorite"/>
+                    </l:BlockLayoutCell>
+
+                    <l:BlockLayoutCell width="3">
+                        <Button icon="sap-icon://media-rewind" class="sapUiTinyMarginBeginEnd"/>
+                        <Button icon="sap-icon://media-play" visible="{= ${player>/playerState/isPlaying} !== true}"
+                                class="sapUiTinyMarginBeginEnd" press="playPress"/>
+                        <Button icon="sap-icon://media-pause" visible="{= ${player>/playerState/isPlaying} === true}"
+                                class="sapUiTinyMarginBeginEnd" press="pausePress"/>
+                        <Button icon="sap-icon://media-forward" class="sapUiTinyMarginBeginEnd"/>
+                    </l:BlockLayoutCell>
+
+                    <l:BlockLayoutCell width="1">
+                        <Button icon="sap-icon://share"/>
+                    </l:BlockLayoutCell>
+                </l:HorizontalLayout>
+            </l:VerticalLayout>
+        </FlexBox>
+    </Panel>
+
+
+    <!--  <Button
+              id="helloDialogButton1"
+              icon="sap-icon://world"
+              text="123"
+              class="sapUiSmallMarginEnd"/> -->
+
+
+</core:FragmentDefinition>

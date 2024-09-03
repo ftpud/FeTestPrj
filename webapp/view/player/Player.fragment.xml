@@ -68,12 +68,4 @@
         </FlexBox>
     </Panel>
 
-
-    <!--  <Button
-              id="helloDialogButton1"
-              icon="sap-icon://world"
-              text="123"
-              class="sapUiSmallMarginEnd"/> -->
-
-
 </core:FragmentDefinition>

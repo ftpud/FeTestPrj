@@ -57,13 +57,13 @@ sap.ui.define([
             this.audio.onloadedmetadata = (event) => {
                 if (this.audio.duration == Infinity) {
                     this.audio.currentTime = 1e101;
-                    //this.audio.ontimeupdate = () => {
-                    //    this.ontimeupdate = () => {
-                   //         return;
-                    //    }
-                    //    this.audio.currentTime = 0;
-                    //    return;
-                    //}
+                    this.audio.ontimeupdate = () => {
+                        this.ontimeupdate = () => {
+                            return;
+                        }
+                        this.audio.currentTime = 0;
+                        return;
+                    }
                 }
             };
 

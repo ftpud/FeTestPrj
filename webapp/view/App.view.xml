@@ -7,59 +7,6 @@
         xmlns:grid="sap.ui.layout.cssgrid"
 >
 
-    <!--
-          <Panel
-                  headerText="{i18n>helloPanelTitle}"
-                  class="sapUiResponsiveMargin"
-                  width="auto">
-              <content>
-
-                   <Button
-                          text="Say Hello"
-                          press=".onShowHello"/>
-                  <Input
-                          value="{/recipient/name}"
-                          description="Hello {/recipient/name}"
-                          valueLiveUpdate="true"
-                          width="60%"/>
-
-                  <core:Fragment id="fragTest" fragmentName="ui5.walkthrough.view.player.Player"/> -->
-    <!--
-                    <l:VerticalLayout class="sapUiContentPadding">
-
-                        <Panel width="auto" class="sapUiResponsiveMargin" >
-                            <headerToolbar>
-                                <OverflowToolbar>
-                                    <Title text="Playlist"/>
-                                    <ToolbarSpacer />
-                                    <Button icon="sap-icon://settings" />
-                                    <Button icon="sap-icon://drop-down-list" />
-                                </OverflowToolbar>
-                            </headerToolbar>
-                            <content>
-                                <List
-                                        id="ProductList"
-                                        items="{/Collection}">
-                                    <headerToolbar>
-                                        <OverflowToolbar>
-                                            <content>
-                                                <Title text="Collection" level="H2" />
-                                                <ToolbarSpacer />
-                                            </content>
-                                        </OverflowToolbar>
-                                    </headerToolbar>
-                                    <StandardListItem title="{title}"/>
-                                </List>
-                            </content>
-                        </Panel>
-
-
-                    </l:VerticalLayout>
-
-                </content>
-            </Panel>
-    -->
-
     <l:VerticalLayout id="containerLayout" width="100%">
         <l:BlockLayout id="blockLayout">
             <l:BlockLayoutRow>
@@ -86,8 +33,7 @@
                                 <StandardListItem
                                         type="Active"
                                         press="itemPressed"
-                                        title="{title}"
-                                />
+                                        title="{title}"/>
                             </items>
                         </List>
                     </Panel>

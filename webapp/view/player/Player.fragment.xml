@@ -37,7 +37,6 @@
                           showValue="true"
                           state="None"/> -->
 
-
                 <Slider
                         min="0"
                         max="{player>/playerState/duration}"
